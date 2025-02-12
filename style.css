@@ -1,0 +1,67 @@
+body {
+    background: url('./images/hearts.png.png') repeat; /* Your heart background */
+    background-size: cover;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #6A0DAD; /* A deep purple for cute vibes */
+    height: 100vh;  /* Makes sure it's centered vertically */
+    margin: 0;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.8); /* Light background to make text pop */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Ensure content inside is centered */
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between buttons */
+    margin-top: 10px;
+    flex-wrap: nowrap; /* Prevents them from stacking */
+    position: relative; /* Ensures button positions behave */
+}
+
+button {
+    font-size: 24px;  /* Make buttons bigger */
+    padding: 15px 25px;
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+    transition: 0.3s;
+    min-width: 120px; /* Ensures both buttons are the same width */
+}
+
+#yes-btn {
+    background-color: pink;
+}
+
+#no-btn {
+    background-color: lightgray;
+    position: relative; /* Starts in normal position */
+}
+
+/* The Grand Escape: No button moves when hovered */
+#no-btn:hover {
+    position: absolute;
+    top: calc(50% - 20px); /* Adjusts position slightly */
+    left: calc(50% - 50px);
+    transform: translate(calc(100px - 50%), calc(100px - 50%)); /* Moves randomly */
+}
